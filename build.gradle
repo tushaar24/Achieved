@@ -7,9 +7,25 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
+
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    ext{
+        navigationVersion = '2.3.5'
+        roomVersion = '2.4.0'
+        coroutinesVersion = '1.5.2'
+        intuitVersion = '1.0.6'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
     }
 }
 
